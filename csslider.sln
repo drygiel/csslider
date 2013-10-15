@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{823DA014
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "themes", "themes", "{7E6F54B4-060B-47E6-9D50-21360EFA6BB1}"
 	ProjectSection(SolutionItems) = preProject
-		examples\themes\csslider.basic.css = examples\themes\csslider.basic.css
+		examples\themes\csslider.default.css = examples\themes\csslider.default.css
 		examples\themes\csslider.light.css = examples\themes\csslider.light.css
 		examples\themes\fruit.jpg = examples\themes\fruit.jpg
 		examples\themes\stones.jpg = examples\themes\stones.jpg

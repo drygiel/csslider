@@ -5,7 +5,8 @@
 @border-size: 10px;
 
 @dot-size: 7px;
-@dot-distance: 10px;
+@dot-distance: 1.5px;
+@dot-distance-top: 10px;
 
 @arrow-size: 20px;
 @arrow-distance: 10px;
@@ -83,8 +84,14 @@
     }
 
     .navigation {
+        position: absolute;
+        bottom: -2 * @dot-size;
+        left: 50%;
+        z-index: 10;
+        margin-bottom: @dot-distance-top;
+        font-size: 0;
+        line-height: 0;
         text-align: center;
-        margin-top: @dot-distance;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -92,11 +99,16 @@
         -ms-user-select: none;
         user-select: none;
 
+
+        > div {
+            margin-left: -100%;
+        }
+
         label {
             display: inline-block;
             cursor: pointer;
-            margin-top: round(@border-size / 3, 2);
             border-radius: 50%;
+            margin: 0 @dot-distance;
             padding: @dot-size;
             background: @bg-color;
 
@@ -106,22 +118,12 @@
         }
     }
 
-    &.inside {
-        @margin: @dot-distance + 2 * @dot-size + 2 + @border-size + round(@border-size / 3, 2) + 3;
+    &.inside .navigation {
+        bottom: @border-size;
+        margin-bottom: -@dot-distance-top;
 
-        .navigation {
-            margin-top: -@margin;
-            margin-bottom: @margin;
-            position: relative;
-            z-index: 10;
-
-            label {
-                border: 1px solid #000;
-            }
-        }
-
-        .arrows {
-            margin-top: -@border-size - @arrow-size + @margin/2;
+        label {
+            border: 1px solid #7e7e7e;            
         }
     }
 
@@ -132,7 +134,7 @@
         width: 100%;
         height: 0;
         padding: @arrow-size + @arrow-distance - 2px;
-        margin-top: -@border-size - @arrow-size - @dot-distance/2;
+        margin-top: -@border-size - @arrow-size;
         z-index: 0;
         -moz-box-sizing: content-box;
         -webkit-box-sizing: content-box;
