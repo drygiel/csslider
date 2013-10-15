@@ -11,7 +11,6 @@ Here are some examples:
 - [Bright](http://rawgithub.com/drygiel/csslider/master/examples/light.html)
 - [Basic](http://rawgithub.com/drygiel/csslider/master/examples/basic.html)
 
-
 ## Installation
 
 - Include the CSS stylesheet at the end of `<head>` element:

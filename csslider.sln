@@ -22,11 +22,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "themes", "themes", "{7E6F54
 		examples\themes\stones.jpg = examples\themes\stones.jpg
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8824EECA-6285-4822-9658-FEF988D14388}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7E6F54B4-060B-47E6-9D50-21360EFA6BB1} = {1EAF7DD6-0005-46F7-90FB-B6589431E327}
+		{1EAF7DD6-0005-46F7-90FB-B6589431E327} = {8824EECA-6285-4822-9658-FEF988D14388}
+		{823DA014-EAE8-4EE0-BA72-D1B8E5EF20D1} = {8824EECA-6285-4822-9658-FEF988D14388}
 	EndGlobalSection
 EndGlobal
