@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{1EAF7DD6-0005-46F7-90FB-B6589431E327}"
+	ProjectSection(SolutionItems) = preProject
+		examples\basic.html = examples\basic.html
+		examples\dark.html = examples\dark.html
+		examples\light.html = examples\light.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{823DA014-EAE8-4EE0-BA72-D1B8E5EF20D1}"
+	ProjectSection(SolutionItems) = preProject
+		build\csslider.less = build\csslider.less
+		build\template.jade = build\template.jade
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "themes", "themes", "{7E6F54B4-060B-47E6-9D50-21360EFA6BB1}"
+	ProjectSection(SolutionItems) = preProject
+		examples\themes\csslider.basic.css = examples\themes\csslider.basic.css
+		examples\themes\csslider.light.css = examples\themes\csslider.light.css
+		examples\themes\fruit.jpg = examples\themes\fruit.jpg
+		examples\themes\stones.jpg = examples\themes\stones.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E6F54B4-060B-47E6-9D50-21360EFA6BB1} = {1EAF7DD6-0005-46F7-90FB-B6589431E327}
+	EndGlobalSection
+EndGlobal
