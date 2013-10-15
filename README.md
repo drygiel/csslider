@@ -2,6 +2,11 @@ CSS Slider
 ==========
 
 Pure CSS, simple slider.
+<p align="center">
+    <a href="http://rawgithub.com/drygiel/csslider/master/examples/light.html" target="_blank">
+        <img src="http://i.imgur.com/oRjssZe.jpg" alt="ight design" />
+    <a/>
+</p>
 
 ## Examples
 
