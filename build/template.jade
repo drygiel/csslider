@@ -1,0 +1,19 @@
+- var config = { 
+-   count: 5, 
+-   group_name: 'slides',
+- }
+
+- var _list = new Array(config.count);
+//- Possible classes: .infinity .inside
+div.csslider#slider1
+    each _ , i in _list
+      input(type='radio', name=config.group_name, id=config.group_name+'_'+i)    
+    ul
+      each _ , i in _list
+        li Slide #{i+1}
+    div.arrows
+      each _ , i in _list
+        label(for=config.group_name+'_'+i)
+    div.navigation
+      each _ , i in _list
+        label(for=config.group_name+'_'+i)
