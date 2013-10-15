@@ -81,8 +81,14 @@
   margin-left: 0%;
 }
 .csslider .navigation {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  z-index: 10;
+  margin-bottom: -10px;
+  font-size: 0;
+  line-height: 0;
   text-align: center;
-  margin-top: 10px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -90,37 +96,34 @@
   -ms-user-select: none;
   user-select: none;
 }
+.csslider .navigation > div {
+  margin-left: -100%;
+}
 .csslider .navigation label {
   display: inline-block;
   cursor: pointer;
-  margin-top: 3.33px;
   border-radius: 50%;
-  padding: 7px;
+  margin: 0 2px;
+  padding: 6px;
   background: #e7e7e7;
 }
 .csslider .navigation label:hover {
   background: #008fdf;
 }
 .csslider.inside .navigation {
-  margin-top: -42.33px;
-  margin-bottom: 42.33px;
-  position: relative;
-  z-index: 10;
+  bottom: 10px;
+  margin-bottom: 10px;
 }
 .csslider.inside .navigation label {
-  border: 1px solid #000;
-}
-.csslider.inside .arrows {
-  margin-top: -8.835px;
+  border: 1px solid #7e7e7e;
 }
 .csslider .arrows {
   position: absolute;
-  left: -28px;
+  left: -18px;
   top: 50%;
   width: 100%;
-  height: 0;
-  padding: 28px;
-  margin-top: -35px;
+  height: 30px;
+  padding: 0 18px;
   z-index: 0;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -129,13 +132,13 @@
 .csslider .arrows label {
   display: none;
   position: absolute;
-  top: 0;
+  top: -50%;
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid #e7e7e7;
-  border-right: 20px solid #e7e7e7;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #e7e7e7;
+  border-right: 15px solid #e7e7e7;
   cursor: pointer;
   -moz-transition: margin .15s;
   -o-transition: margin .15s;
@@ -145,15 +148,15 @@
 .csslider .arrows label:hover {
   border-left-color: #008fdf;
   border-right-color: #008fdf;
-  margin: 0 -3px;
+  margin: 0 0px;
 }
 .csslider .arrows label:before {
   content: '';
   position: absolute;
-  top: -20px;
-  left: -33px;
-  height: 40px;
-  width: 66px;
+  top: -15px;
+  left: -20px;
+  height: 30px;
+  width: 40px;
 }
 .csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1),
 .csslider > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2),

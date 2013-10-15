@@ -88,7 +88,7 @@
         bottom: -2 * @dot-size;
         left: 50%;
         z-index: 10;
-        margin-bottom: @dot-distance-top;
+        margin-bottom: -@dot-distance-top;
         font-size: 0;
         line-height: 0;
         text-align: center;
@@ -120,7 +120,7 @@
 
     &.inside .navigation {
         bottom: @border-size;
-        margin-bottom: -@dot-distance-top;
+        margin-bottom: @dot-distance-top;
 
         label {
             border: 1px solid #7e7e7e;            
@@ -132,9 +132,8 @@
         left: -@arrow-size - @arrow-distance + 2px;
         top: 50%;
         width: 100%;
-        height: 0;
-        padding: @arrow-size + @arrow-distance - 2px;
-        margin-top: -@border-size - @arrow-size;
+        height: 2 * @arrow-size;
+        padding: 0 @arrow-size + @arrow-distance - 2px;
         z-index: 0;
         -moz-box-sizing: content-box;
         -webkit-box-sizing: content-box;
@@ -143,7 +142,7 @@
         label {
             display: none;
             position: absolute;
-            top: 0;
+            top: -50%;
             width: 0;
             height: 0;
             border-top: @arrow-size solid transparent;
