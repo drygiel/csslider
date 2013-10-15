@@ -68,7 +68,7 @@ Here are some examples:
 	```
 
 ## Global configuration
-Default configuration can be set in [SCSS](https://github.com/drygiel/csslider/blob/master/build/csslider.less) file.
+Default configuration can be set in [LESS](https://github.com/drygiel/csslider/blob/master/build/csslider.less) file.
 
 ## Local configuration
 If you want to change configuration for specific element you must override default config. 
