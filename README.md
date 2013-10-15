@@ -38,10 +38,10 @@ Here are some examples:
 	
 	```html
 	<div class="csslider">
-	    <input type="radio" name="slides" id="slides_0" checked />
-	    <input type="radio" name="slides" id="slides_1" />
+	    <input type="radio" name="slides" id="slides_1" checked />
 	    <input type="radio" name="slides" id="slides_2" />
 	    <input type="radio" name="slides" id="slides_3" />
+	    <input type="radio" name="slides" id="slides_4" />
 	    <input type="radio" name="slides" id="slides_N" />
 	    <ul>
 	        <li>Content of slide 1</li>
@@ -51,19 +51,41 @@ Here are some examples:
 	        <li>Content of slide N</li>
 	    </ul>
 	    <div class="arrows">
-	        <label for="slides_0"></label>
 	        <label for="slides_1"></label>
 	        <label for="slides_2"></label>
 	        <label for="slides_3"></label>
+	        <label for="slides_4"></label>
 	        <label for="slides_N"></label>
 	    </div>
 	    <div class="navigation">
-	        <label for="slides_0"></label>
 	        <label for="slides_1"></label>
 	        <label for="slides_2"></label>
 	        <label for="slides_3"></label>
+	        <label for="slides_4"></label>
 	        <label for="slides_N"></label>
 	    </div>
 	</div>
+	```
+
+## Global configuration
+Default configuration can be set in [SCSS](https://github.com/drygiel/csslider/blob/master/build/csslider.less) file.
+
+## Local configuration
+If you want to change configuration for specific element you must override default config. 
+For instance if you have an element with id `#my-slider` and you want to change:
+- arrows color
+
+	```css
+#my-slider .arrows label {
+		border-left-color: red;
+		border-right-color: red;
+}
+	```
+- inside navigation border
+
+	```css
+#my-slider.inside .navigation label {
+		border: 1px solid red;
+}
 	```
 
