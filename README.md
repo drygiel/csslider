@@ -15,6 +15,7 @@ Here are some examples:
 - [Dark](http://rawgithub.com/drygiel/csslider/master/examples/dark.html)
 - [Bright](http://rawgithub.com/drygiel/csslider/master/examples/light.html)
 - [Basic](http://rawgithub.com/drygiel/csslider/master/examples/basic.html)
+- [Playground](http://codepen.io/drygiel/pen/rtpnE)
 
 
 ## Supported browsers
@@ -66,6 +67,7 @@ Here are some examples:
 	    </div>
 	</div>
 	```
+	Code you can generate from [JADE](https://github.com/drygiel/csslider/blob/master/build/template.jade) template file [here](http://codepen.io/drygiel/pen/rtpnE)
 
 ## Global configuration
 Default configuration can be set in [LESS](https://github.com/drygiel/csslider/blob/master/build/csslider.less) file.
