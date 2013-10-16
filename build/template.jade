@@ -4,12 +4,7 @@
 -   infinity: false,         // if true navigation dots apears inside of slider box
 -   inside: false,           // if true dots inside of slider
 -   group_name: 'slides',    // each slider on page has to have another group name 
--   presentation_mode: true, // if false generates skeleton only
 - }
-
-if(config.presentation_mode) 
-  h1(style="padding-top: 60px;") CSS Slider
-  h2 Pure CSS Slider. No JS. Because it is possieble!
 
 - var _list = new Array(config.count);
 div.csslider#slider1(class=(config.inside? 'inside ':'') + (config.infinity? 'infinity':''))
@@ -22,47 +17,7 @@ div.csslider#slider1(class=(config.inside? 'inside ':'') + (config.infinity? 'in
 
     ul
       each _ , i in _list
-        if(config.presentation_mode)
-          li(class=(i==3? 'scrollable':''))
-            case i
-              when 0
-                h1 Say hello to CSS3
-                p CSSlider is lightweight & easy to use slider. No JS - pure CSS.
-              when 1
-                img(src='http://rawgithub.com/drygiel/csslider/master/examples/themes/stones.jpg')
-              when 2
-                div#bg
-                  div
-                    h1 CSS Events
-                    p When slide 3 is reached - play CSS animation!
-              when 3              
-                h1 Lots of text
-                h2 Scrollable one
-                p.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada mi,
-                  semper id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada mi,
-                  semper id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada mi,
-                  semper id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada mi,
-                  semper id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada mi,
-                  semper id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada mi,
-                  semper id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-              when 4
-                div#center 
-                  a.nice-link(href='https://github.com/drygiel/csslider', 
-                              data-text='More examples on github',
-                              target='_blank') More examples on github
-              when 5
-                div#center
-                  a#dex-sign.play(href='http://drygiel.com', target='_blank')
-              default
-                | Slide #{i+1}
-        else
-          li Slide #{i+1}
+        li Slide #{i+1}
     div.arrows
       each _ , i in _list
         label(for=config.group_name+'_'+(i+1))
@@ -72,9 +27,4 @@ div.csslider#slider1(class=(config.inside? 'inside ':'') + (config.infinity? 'in
         each _ , i in _list
           label(for=config.group_name+'_'+(i+1))
 
-if(config.presentation_mode) 
-  a(href='https://github.com/drygiel', target='_blank')
-    img(style='position: absolute; top: 0; left: 0; border: 0;',
-        src='https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png',
-        alt='Fork me on GitHub')
       
