@@ -59,11 +59,13 @@ Here are some examples:
 	        <label for="slides_N"></label>
 	    </div>
 	    <div class="navigation">
-	        <label for="slides_1"></label>
-	        <label for="slides_2"></label>
-	        <label for="slides_3"></label>
-	        <label for="slides_4"></label>
-	        <label for="slides_N"></label>
+		    <div>
+	        	<label for="slides_1"></label>
+	        	<label for="slides_2"></label>
+	        	<label for="slides_3"></label>
+	        	<label for="slides_4"></label>
+	        	<label for="slides_N"></label>
+		    </div>
 	    </div>
 	</div>
 	```
