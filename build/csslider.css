@@ -1,10 +1,12 @@
-﻿/*#region CONFIG */
-/*#endregion */
-.csslider {
+﻿.csslider {
+  -moz-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
   display: inline-block;
   text-align: left;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 .csslider > input {
   display: none;
@@ -41,8 +43,8 @@
 }
 .csslider > ul {
   position: relative;
-  width: 820px;
-  height: 420px;
+  width: 916px;
+  height: 483px;
   z-index: 1;
   font-size: 0;
   line-height: 0;
@@ -84,7 +86,7 @@
 }
 .csslider > .navigation {
   position: absolute;
-  bottom: -12px;
+  bottom: -8px;
   left: 50%;
   z-index: 10;
   margin-bottom: -10px;
@@ -102,15 +104,28 @@
   margin-left: -100%;
 }
 .csslider > .navigation label {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   border-radius: 50%;
-  margin: 0 2px;
-  padding: 6px;
+  margin: 0 4px;
+  padding: 4px;
   background: #3a3a3a;
 }
-.csslider > .navigation label:hover {
+.csslider > .navigation label:hover:after {
+  opacity: 1;
+}
+.csslider > .navigation label:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
   background: #71ad37;
+  border-radius: 50%;
+  padding: 6px;
+  opacity: 0;
 }
 .csslider > .arrows {
   -webkit-touch-callout: none;
@@ -127,18 +142,18 @@
 .csslider.inside .navigation label {
   border: 1px solid #7e7e7e;
 }
-.csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1),
-.csslider > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2),
-.csslider > input:nth-of-type(3):checked ~ .navigation label:nth-of-type(3),
-.csslider > input:nth-of-type(4):checked ~ .navigation label:nth-of-type(4),
-.csslider > input:nth-of-type(5):checked ~ .navigation label:nth-of-type(5),
-.csslider > input:nth-of-type(6):checked ~ .navigation label:nth-of-type(6),
-.csslider > input:nth-of-type(7):checked ~ .navigation label:nth-of-type(7),
-.csslider > input:nth-of-type(8):checked ~ .navigation label:nth-of-type(8),
-.csslider > input:nth-of-type(9):checked ~ .navigation label:nth-of-type(9),
-.csslider > input:nth-of-type(10):checked ~ .navigation label:nth-of-type(10),
-.csslider > input:nth-of-type(11):checked ~ .navigation label:nth-of-type(11) {
-  background-color: #71ad37;
+.csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1):after,
+.csslider > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2):after,
+.csslider > input:nth-of-type(3):checked ~ .navigation label:nth-of-type(3):after,
+.csslider > input:nth-of-type(4):checked ~ .navigation label:nth-of-type(4):after,
+.csslider > input:nth-of-type(5):checked ~ .navigation label:nth-of-type(5):after,
+.csslider > input:nth-of-type(6):checked ~ .navigation label:nth-of-type(6):after,
+.csslider > input:nth-of-type(7):checked ~ .navigation label:nth-of-type(7):after,
+.csslider > input:nth-of-type(8):checked ~ .navigation label:nth-of-type(8):after,
+.csslider > input:nth-of-type(9):checked ~ .navigation label:nth-of-type(9):after,
+.csslider > input:nth-of-type(10):checked ~ .navigation label:nth-of-type(10):after,
+.csslider > input:nth-of-type(11):checked ~ .navigation label:nth-of-type(11):after {
+  opacity: 1;
 }
 .csslider > .arrows {
   position: absolute;
