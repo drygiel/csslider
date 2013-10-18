@@ -1,4 +1,4 @@
-﻿// CONFIG
+﻿// CONFIG 
 
 // Main
 @border-size: 10px;
@@ -81,10 +81,6 @@
             -o-transition: all @speed ease-out;
             -webkit-transition: all @speed @easing;
             transition: all @speed @easing;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            -webkit-background-size: cover;
-            background-size: cover;
             vertical-align: top;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
@@ -142,6 +138,11 @@
 
     > .arrows {
         .noSelect();
+        
+        .goto-first,
+        .goto-last {
+
+        }
     }
 
     &.inside .navigation {
@@ -215,10 +216,10 @@
             padding: @arrow-size;
             box-shadow: inset @arrow-thickness -@arrow-thickness 0 (@arrow-thickness - 1px) @arrow-color;
             cursor: pointer;
-            -moz-transition: .15s;
-            -o-transition: .15s;
-            -webkit-transition: .15s;
-            transition: .15s;
+            -moz-transition: box-shadow .15s, margin .15s;
+            -o-transition: box-shadow .15s, margin .15s;
+            -webkit-transition: box-shadow .15s, margin .15s;
+            transition: box-shadow .15s, margin .15s;
 
             &:hover {
                 box-shadow: inset @arrow-thickness-hover -@arrow-thickness-hover 0 (@arrow-thickness-hover - 1px) @arrow-hover-color;
@@ -238,12 +239,13 @@
 
     // Left conditions
     & {
-        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows label:nth-of-type(  $im1  ),');
-        .csslider.infinity > input:first-of-type:checked ~ .arrows label:last-of-type,
+        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows > label:nth-of-type(  $im1  ),');
+        .csslider.infinity > input:first-of-type:checked ~ .arrows label.goto-last,
         @{result}
         {
             display: block;            
             left: 0;
+            right: auto;
             -moz-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             -o-transform: rotate(45deg);
@@ -254,12 +256,13 @@
 
     // Right conditions
     & {
-        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows label:nth-of-type(  $ip1  ),');
-        .csslider.infinity > input:last-of-type:checked ~ .arrows label:first-of-type,
+        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows > label:nth-of-type(  $ip1  ),');
+        .csslider.infinity > input:last-of-type:checked ~ .arrows label.goto-first,
         @{result}
         {
             display: block;
             right: 0;
+            left: auto;
             -moz-transform: rotate(225deg);
             -ms-transform: rotate(225deg);
             -o-transform: rotate(225deg);
@@ -318,24 +321,26 @@
 
     // Left conditions
     & {
-        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows label:nth-of-type(  $im1  ),');
-        .csslider.infinity > input:first-of-type:checked ~ .arrows label:last-of-type,
+        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows > label:nth-of-type(  $im1  ),');
+        .csslider.infinity > input:first-of-type:checked ~ .arrows label.goto-last,
         @{result} 
         {
             display: block;
             left: 0;
+            right: auto;
             border-left: none;
         }
     }
 
     // Right conditions
     & {
-        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows label:nth-of-type(  $ip1  ),');
-        .csslider.infinity > input:last-of-type:checked ~ .arrows label:first-of-type,
+        .repeat('.csslider > input:nth-of-type(  $i  ):checked ~ .arrows > label:nth-of-type(  $ip1  ),');
+        .csslider.infinity > input:last-of-type:checked ~ .arrows label.goto-first,
         @{result} 
         {
             display: block;
             right: 0;
+            left: auto;
             border-right: none;
         }
     }

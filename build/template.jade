@@ -21,6 +21,8 @@ div.csslider#slider1(class=(config.inside? 'inside ':'') + (config.infinity? 'in
     div.arrows
       each _ , i in _list
         label(for=config.group_name+'_'+(i+1))
+      label(for=config.group_name+'_'+1, class="goto-first")
+      label(for=config.group_name+'_'+config.count, class="goto-last")
         
     div.navigation 
       div

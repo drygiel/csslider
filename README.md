@@ -57,6 +57,8 @@ Here are some examples:
 	        <label for="slides_3"></label>
 	        <label for="slides_4"></label>
 	        <label for="slides_N"></label>
+	        <label for="slides_1" class="goto-first"></label>
+	        <label for="slides_N" class="goto-last"></label>
 	    </div>
 	    <div class="navigation">
 		    <div>
