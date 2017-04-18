@@ -82,7 +82,7 @@ For instance if you have an element with id `#my-slider` and you want to change:
 - arrows color
 
 	```css
-#my-slider .arrows label {
+# my-slider .arrows label {
 		border-left-color: red;
 		border-right-color: red;
 }
@@ -90,7 +90,7 @@ For instance if you have an element with id `#my-slider` and you want to change:
 - inside navigation border
 
 	```css
-#my-slider.inside .navigation label {
+# my-slider.inside .navigation label {
 		border: 1px solid red;
 }
 	```
