@@ -27,15 +27,22 @@
 @speed: .5s;
 @easing: cubic-bezier(.4,1.3,.65,1); // ease-out
 
+body{
+	margin: 0;
+	padding: 50px 0 0 0; 
+	text-align: center;
+}
+
 .csslider {    
     -moz-perspective: 1300px;
     -ms-perspective: 1300px;
     -webkit-perspective: 1300px;
     perspective: 1300px;
+	 width: 90%;
     display: inline-block;
     text-align: left;
     position: relative;
-    margin-bottom: @dot-distance + @dot-distance-top + 2 * @dot-outer-size;
+    margin-bottom: @dot-distance + @dot-distance-top + 4 * @dot-outer-size;
 
     > input {
         display: none;
@@ -53,7 +60,7 @@
 
     > ul {
         position: relative;
-        width: @slider-inner-width + 2 * @border-size;
+        width: 80%;
         height: @slider-inner-height + 2 * @border-size;
         z-index: 1;
         font-size: 0;
@@ -198,15 +205,16 @@
 
     .csslider > .arrows {
         position: absolute;
-        left: -@arrow-size - 3px - @arrow-distance;
+        left: 50%;
         top: 50%;
-        width: 100%;
+        width: 80%;
         height: 2 * @arrow-size;
         padding: 0 @arrow-size + 3px + @arrow-distance;
         z-index: 0;
         -moz-box-sizing: content-box;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
+		  transform: translate(-50%, -50%);
 
         label {
             display: none;
@@ -343,6 +351,23 @@
             border-right: none;
         }
     }
+}
+
+/* Responsive */
+@media screen and (max-width: 770px) {
+    .csslider{
+        > ul{
+            height: @slider-inner-height - 200;
+        }
+    }
+    .csslider{
+        > .arrows {
+            position: absolute;
+            left: 50%;
+            top: 120%;
+            width: 55%;
+        }
+    } 
 }
 
 /*#endregion */
